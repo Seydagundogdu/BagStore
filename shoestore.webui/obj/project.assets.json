@@ -1484,6 +1484,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "shoestore.business/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "shoestore.data": "1.0.0",
+          "shoestore.entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/shoestore.business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/shoestore.business.dll": {}
+        }
+      },
       "shoestore.data/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -5700,6 +5714,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "shoestore.business/1.0.0": {
+      "type": "project",
+      "path": "../shoestore.business/shoestore.business.csproj",
+      "msbuildProject": "../shoestore.business/shoestore.business.csproj"
+    },
     "shoestore.data/1.0.0": {
       "type": "project",
       "path": "../shoestore.data/shoestore.data.csproj",
@@ -5715,7 +5734,9 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.Design >= 3.1.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.10",
-      "shoestore.data >= 1.0.0"
+      "shoestore.business >= 1.0.0",
+      "shoestore.data >= 1.0.0",
+      "shoestore.entity >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5724,11 +5745,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.webui\\shoestore.csproj",
+      "projectUniqueName": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.webui\\shoestore.csproj",
       "projectName": "shoestore",
-      "projectPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.webui\\shoestore.csproj",
+      "projectPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.webui\\shoestore.csproj",
       "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.webui\\obj\\",
+      "outputPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.webui\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5742,8 +5763,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\shoestore.data.csproj": {
-              "projectPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\shoestore.data.csproj"
+            "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.business\\shoestore.business.csproj": {
+              "projectPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.business\\shoestore.business.csproj"
+            },
+            "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\shoestore.data.csproj": {
+              "projectPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\shoestore.data.csproj"
+            },
+            "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj": {
+              "projectPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj"
             }
           }
         }

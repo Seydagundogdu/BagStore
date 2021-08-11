@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\shoestore.data.csproj": {}
+    "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\shoestore.data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\shoestore.data.csproj": {
+    "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\shoestore.data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\shoestore.data.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\shoestore.data.csproj",
         "projectName": "shoestore.data",
-        "projectPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\shoestore.data.csproj",
+        "projectPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\shoestore.data.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\obj\\",
+        "outputPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.entity\\shoestore.entity.csproj": {
-                "projectPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.entity\\shoestore.entity.csproj"
+              "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj": {
+                "projectPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj"
               }
             }
           }
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.entity\\shoestore.entity.csproj": {
+    "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.entity\\shoestore.entity.csproj",
+        "projectUniqueName": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj",
         "projectName": "shoestore.entity",
-        "projectPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.entity\\shoestore.entity.csproj",
+        "projectPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj",
         "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.entity\\obj\\",
+        "outputPath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config"

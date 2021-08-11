@@ -11,6 +11,8 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using shoestore.data.Concrete.EfCore;
 using shoestore.data.Abstract;
+using shoestore.business.Abstract;
+using shoestore.business.Concrete;
 
 namespace shoestore.webui
 {
@@ -21,7 +23,10 @@ namespace shoestore.webui
         public void ConfigureServices(IServiceCollection services)
         {
             //farklı bir servis kullanıldığında (mysql,adonet vb) yapılması gereken tek şey efCoreProductRepository yerine o servisin sınıfını eklemek
+            //dependency injection
             services.AddScoped<IProductRepository, EfCoreProductRepository>(); //IProductRepository çağırılınca EfCoreProductRepository'den nesne üretip gönder
+            services.AddScoped<IProductService, ProductManager>();
+            
             services.AddControllersWithViews();
         }
 

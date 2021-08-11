@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using shoestore.data.Abstract;
+using shoestore.business.Abstract;
 
 namespace shoestore.webui.Controllers
 {
     public class HomeController:Controller
     {
-        private IProductRepository _productRepository;
+        private IProductService _productService;
 
-        public HomeController(IProductRepository productRepository)
+        public HomeController(IProductService productService)
         {
-            this._productRepository = productRepository; //Injection işlemi
+            this._productService = productService; //Injection işlemi
         }
         public IActionResult Index()
         {   
 
             var productViewModel = new ProductViewModel()
             {
-                Products = _productRepository.GetAll()
+                Products = _productService.GetAll()
             };
 
             return View(productViewModel);

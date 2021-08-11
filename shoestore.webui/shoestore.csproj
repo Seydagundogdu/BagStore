@@ -2,6 +2,8 @@
 
 <ItemGroup>
     <ProjectReference Include="..\shoestore.data\shoestore.data.csproj" />
+    <ProjectReference Include="..\shoestore.entity\shoestore.entity.csproj" />
+    <ProjectReference Include="..\shoestore.business\shoestore.business.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -9,3 +9,14 @@ C:\Users\acer\Desktop\shoestore\shoestore.data\obj\Debug\netstandard2.0\shoestor
 C:\Users\acer\Desktop\shoestore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.csproj.CopyComplete
 C:\Users\acer\Desktop\shoestore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.dll
 C:\Users\acer\Desktop\shoestore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.pdb
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\bin\Debug\netstandard2.0\shoestore.data.deps.json
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\bin\Debug\netstandard2.0\shoestore.data.dll
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\bin\Debug\netstandard2.0\shoestore.data.pdb
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\bin\Debug\netstandard2.0\shoestore.entity.dll
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\bin\Debug\netstandard2.0\shoestore.entity.pdb
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.csprojAssemblyReference.cache
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.AssemblyInfo.cs
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.csproj.CopyComplete
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.dll
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.data\obj\Debug\netstandard2.0\shoestore.data.pdb
