@@ -41,9 +41,12 @@ namespace shoestore.webui
                  FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
                  RequestPath = "/modules"
             });
-            if (env.IsDevelopment())
+            if (env.IsDevelopment()) //uygulama geliştiriken çalışacak olan kısımlar
+            //yayınlanana kadar true değer döndürür
+            //yayınlanırken launch.json içerinden "ASPPNETCORE_ENVİRONMENT" değeri "production" yapılırsa false döndürür
             {
-                app.UseDeveloperExceptionPage();
+                SeedDatabase.Seed(); //test verilerini veri tabanına ekler
+                app.UseDeveloperExceptionPage(); //hata mesajı verir
             }
 
             app.UseRouting();
