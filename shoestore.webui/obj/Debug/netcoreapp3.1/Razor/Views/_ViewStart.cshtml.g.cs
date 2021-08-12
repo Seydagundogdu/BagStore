@@ -14,13 +14,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 7 "C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\Views\_ViewImports.cshtml"
+using shoestore.webui.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 9 "C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\Views\_ViewImports.cshtml"
 using shoestore.entity;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 10 "C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\Views\_ViewImports.cshtml"
+using shoestore.webui.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b1deeb63d74f41de06b0a8c40b564b1ddb8aea73", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fab3a40edf0aea072491ab87c766b9ce1dce789a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6899d8632815a010ad397d88e8e8b36bed403be7", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

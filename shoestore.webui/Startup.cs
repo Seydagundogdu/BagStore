@@ -24,8 +24,11 @@ namespace shoestore.webui
         {
             //farklı bir servis kullanıldığında (mysql,adonet vb) yapılması gereken tek şey efCoreProductRepository yerine o servisin sınıfını eklemek
             //dependency injection
+            services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
             services.AddScoped<IProductRepository, EfCoreProductRepository>(); //IProductRepository çağırılınca EfCoreProductRepository'den nesne üretip gönder
+            
             services.AddScoped<IProductService, ProductManager>();
+            services.AddScoped<ICategoryService, CategoryManager>();
             
             services.AddControllersWithViews();
         }
@@ -53,6 +56,24 @@ namespace shoestore.webui
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(//ürünler linkine tıklandığında storecontroller altındaki list metoduna gitmesi için
+                    name: "search",
+                    pattern: "search",
+                    defaults: new {controller="Store", action="search"}
+                );
+
+                endpoints.MapControllerRoute(//ürünler linkine tıklandığında storecontroller altındaki list metoduna gitmesi için
+                    name: "productdetails",
+                    pattern: "{url}",
+                    defaults: new {controller="Store", action="details"}
+                );
+
+                endpoints.MapControllerRoute(//ürünler linkine tıklandığında storecontroller altındaki list metoduna gitmesi için
+                    name: "products",
+                    pattern: "products/{category?}",
+                    defaults: new {controller="Store", action="list"}
+                );
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"

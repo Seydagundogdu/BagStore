@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JgYsEDGhWJGlqZ4Zqy5zRyTKqCBCbPPMYKXg3qhcVKLbpXErkqva8SYyGMpVDi48PtZ1wExbrC5HezNzi1eAtQ==",
+  "dgSpecHash": "TMQuP4etOU2nH3cdoO1Zx5rkoYmflPaN8xSeD4oop56/geMqgA8+Sfx5ova8F1+EdXyzlS5oRebqTIfiyqKeTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.data\\shoestore.data.csproj",
+  "projectFilePath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.data\\shoestore.data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

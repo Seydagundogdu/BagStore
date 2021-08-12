@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UtNxh2ljdAAzU1a+YY6TVvKwsQNtPHiofT/HUmhQDVoi16oSHJmUlj7Fo1AaaFa6nc9WGsVHEhOJUWBJAkAz7g==",
+  "dgSpecHash": "yGKc1nZat6AwCRy3H6SR8BJwgCr5CQY5VfcrnVPHFKu2uqGQiY1AcPm2sv3Jzgc2FQF6SIGyE0XaNQmv0ZhZwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\acer\\Desktop\\shoestore\\shoestore.entity\\shoestore.entity.csproj",
+  "projectFilePath": "C:\\Users\\acer\\Documents\\GitHub\\ShoeStore\\shoestore.entity\\shoestore.entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\acer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

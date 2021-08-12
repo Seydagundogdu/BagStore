@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using shoestore.data.Abstract;
 using shoestore.business.Abstract;
+using shoestore.webui.ViewModels;
 
 namespace shoestore.webui.Controllers
 {
@@ -18,9 +19,9 @@ namespace shoestore.webui.Controllers
         public IActionResult Index()
         {   
 
-            var productViewModel = new ProductViewModel()
+            var productViewModel = new ProductListViewModel()
             {
-                Products = _productService.GetAll()
+                Products = _productService.GetHomePageProducts()
             };
 
             return View(productViewModel);

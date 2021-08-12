@@ -1,10 +1,16 @@
 @model List<Category>
 
 <div class="list-group">
-    <a href="/product/list" class="list-group-item list-group-item-action">Tüm Koleksiyon</a>
+    <a href="/products" class="list-group-item list-group-item-action">Tüm Koleksiyon</a>
 
-    @foreach (var category in Model)
+@foreach (var item in Model)
     {
-        <a href="/product/list/@category.CategoryId" class="list-group-item list-group-item-action">@category.Name</a>
+        <a asp-controller="Store" 
+        asp-action="List" 
+        asp-route-category="@item.Url" 
+        class="list-group-item list-group-item-action @(ViewBag.SelectedCategory == item.Url?"active":"")">
+            @item.Name
+        </a>
     }
 </div>
+

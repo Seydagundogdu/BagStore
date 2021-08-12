@@ -194,3 +194,7 @@ C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\obj\Debug\netcoreapp3.1
 C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\obj\Debug\netcoreapp3.1\shoestore.pdb
 C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\bin\Debug\netcoreapp3.1\shoestore.business.dll
 C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\bin\Debug\netcoreapp3.1\shoestore.business.pdb
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Store\List.cshtml.g.cs
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Store\Details.cshtml.g.cs
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_search.cshtml.g.cs
+C:\Users\acer\Documents\GitHub\ShoeStore\shoestore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Store\Search.cshtml.g.cs
