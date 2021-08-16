@@ -1,0 +1,16 @@
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\bin\Debug\netstandard2.0\bagstore.entity.deps.json
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\bin\Debug\netstandard2.0\bagstore.entity.dll
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\bin\Debug\netstandard2.0\bagstore.entity.pdb
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.csprojAssemblyReference.cache
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.AssemblyInfo.cs
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.dll
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.pdb
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\bin\Debug\netstandard2.0\bagstore.entity.deps.json
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\bin\Debug\netstandard2.0\bagstore.entity.dll
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\bin\Debug\netstandard2.0\bagstore.entity.pdb
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.csprojAssemblyReference.cache
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.AssemblyInfo.cs
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.dll
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.pdb

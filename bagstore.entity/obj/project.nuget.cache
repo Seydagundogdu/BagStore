@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0kLvd3l+ldcY58Q5WQU8K107CX03Z2hVovF0x8Hbab+FL4CumxtY422mhNlo62lsLdwyyqs1Pxb88/zto6NgIw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\acer\\Documents\\GitHub\\BagStore\\bagstore.entity\\bagstore.entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\acer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

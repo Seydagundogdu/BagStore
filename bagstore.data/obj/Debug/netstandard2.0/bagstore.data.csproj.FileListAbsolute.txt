@@ -1,0 +1,14 @@
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.csprojAssemblyReference.cache
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\GitHub\ShoeStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.AssemblyInfo.cs
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\bin\Debug\netstandard2.0\bagstore.data.deps.json
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\bin\Debug\netstandard2.0\bagstore.data.dll
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\bin\Debug\netstandard2.0\bagstore.data.pdb
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\bin\Debug\netstandard2.0\bagstore.entity.dll
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\bin\Debug\netstandard2.0\bagstore.entity.pdb
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.csprojAssemblyReference.cache
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.AssemblyInfo.cs
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.csproj.CopyComplete
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.dll
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.pdb
