@@ -8,10 +8,10 @@ namespace bagstore.webui.Models
     {
         public int CategoryId { get; set; }
 
-        [Required(ErrorMessage="Kategori alanı zorunludur.")]
+        [Required(ErrorMessage="The 'category name' field is required.")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage="Url alanı zorunludur.")]
+        [Required(ErrorMessage="The 'url' field is required.")]
         public string Url { get; set; }
         public List<Product> Products { get; set; } //categori bilgisinin yanında gelecek olan liste
     }

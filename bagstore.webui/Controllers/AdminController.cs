@@ -36,7 +36,7 @@ namespace bagstore.webui.Controllers
         }
 
         [HttpPost]
-        public IActionResult ProductCreate(ProductModel model) //submit butonuna basınca
+        public async Task<IActionResult> ProductCreate(ProductModel model, IFormFile file) //submit butonuna basınca
         {
             if(ModelState.IsValid)
             {
@@ -45,13 +45,26 @@ namespace bagstore.webui.Controllers
                     Name = model.Name,
                     Url = model.Url,
                     Price = model.Price,
-                    Description = model.Description,
-                    ImageUrl = model.ImageUrl
+                    Description = model.Description
                 };
+
+                if(file!=null)//form içerisinden bir dosya yollandıysa
+                {
+                    var extention = Path.GetExtension(file.FileName);//resmin uzantısı
+                    var randName = string.Format($"{Guid.NewGuid()}{extention}");//random gelen eşsiz isim
+                    entity.ImageUrl = randName;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot\\img",randName);//GetCurrentDirectory: uygulamanın çalıştığı ana dizini getirir
+
+
+                    using(var stream = new FileStream(path, FileMode.Create))//resmi kayıt etme
+                    {
+                        await file.CopyToAsync(stream); //await: asenkron metot kullandığın için işlem sona erene kadar uygulama durudurulur
+                    }
+                }
 
                 _productService.Create(entity);
                 
-                CreateMessage("Kayıt eklendi","success");
+                CreateMessage("The product has been added.","success");
                 return RedirectToAction("ProductList");
             }
             return View(model);
@@ -107,23 +120,23 @@ namespace bagstore.webui.Controllers
                 entity.IsApproved = model.IsApproved;
                 entity.IsHome = model.IsHome;
 
-                if(file!=null)
+                if(file!=null)//form içerisinden bir dosya yollandıysa
                 {
-                    var extention = Path.GetExtension(file.FileName);
-                    var randName = string.Format($"{Guid.NewGuid()}{extention}");
+                    var extention = Path.GetExtension(file.FileName);//resmin uzantısı
+                    var randName = string.Format($"{Guid.NewGuid()}{extention}");//random gelen eşsiz isim
                     entity.ImageUrl = randName;
-                    var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot\\img",randName);
+                    var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot\\img",randName);//GetCurrentDirectory: uygulamanın çalıştığı ana dizini getirir
 
 
-                    using(var stream = new FileStream(path, FileMode.Create))
+                    using(var stream = new FileStream(path, FileMode.Create))//resmi kayıt etme
                     {
-                        await file.CopyToAsync(stream); //await: asenkron metot kullandığın için uygulamayı durduruyor
+                        await file.CopyToAsync(stream); //await: asenkron metot kullandığın için işlem sona erene kadar uygulama durudurulur
                     }
                 }
 
                 if(_productService.Update(entity, categoryId))
                 {
-                    CreateMessage("Kayıt güncellendi","success");
+                    CreateMessage("The product has been updated.","success");
                     return RedirectToAction("ProductList");
                 }
                 CreateMessage(_productService.ErrorMessage,"danger");
@@ -143,14 +156,7 @@ namespace bagstore.webui.Controllers
 
             //redirectToAction kullanılarak farklı bir actiona yönlendirme yapıldığı iin mesajlar viewdata ile değil tempdata ile alınır
 
-            var msg = new AlertMessage()
-            {
-                Message = $"{entity.Name} has been deleted.",
-                AlertType = "danger"
-
-            };
-
-            TempData["message"] = JsonConvert.SerializeObject(msg); //obje serialize edilmiyor hatasından sonra objeyi json formatına dönüştürerek serialize ettim
+            CreateMessage("The product has been deleted.","danger");
             return RedirectToAction("ProductList");
         }
 
@@ -180,9 +186,7 @@ namespace bagstore.webui.Controllers
 
                 _categoryService.Create(entity);
 
-               
-
-
+               CreateMessage("The product has been added.","success");
                 return RedirectToAction("CategoryList");
             }
             return View(model);
@@ -231,15 +235,7 @@ namespace bagstore.webui.Controllers
 
                 //redirectToAction kullanılarak farklı bir actiona yönlendirme yapıldığı iin mesajlar viewdata ile değil tempdata ile alınır
 
-                var msg = new AlertMessage()
-                {
-                    Message = $"{entity.Name} category updated.",
-                    AlertType = "success"
-
-                };
-
-                TempData["message"] = JsonConvert.SerializeObject(msg); //obje serialize edilmiyor hatasından sonra objeyi json formatına dönüştürerek serialize ettim
-
+                CreateMessage("The category has been updated.","success");
                 return RedirectToAction("CategoryList");
             }
             return  View(model);
@@ -257,14 +253,7 @@ namespace bagstore.webui.Controllers
 
             //redirectToAction kullanılarak farklı bir actiona yönlendirme yapıldığı iin mesajlar viewdata ile değil tempdata ile alınır
 
-            var msg = new AlertMessage()
-            {
-                Message = $"{entity.Name} category deleted.",
-                AlertType = "danger"
-
-            };
-
-            TempData["message"] = JsonConvert.SerializeObject(msg); //obje serialize edilmiyor hatasından sonra objeyi json formatına dönüştürerek serialize ettim
+            CreateMessage("The category has been deleted.","danger");
             return RedirectToAction("CategoryList");
         }
 
