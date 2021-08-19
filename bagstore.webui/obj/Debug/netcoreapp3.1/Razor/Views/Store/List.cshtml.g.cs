@@ -33,8 +33,22 @@ using Newtonsoft.Json;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\Views\_ViewImports.cshtml"
+using bagstore.webui.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7efc45240e0bb11c6dc6cf41bef864f3557a693a", @"/Views/Store/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e774691b6c79bff31f7ab3100770fc0e4b16dbf1", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dfa161aef454dc85e24b4b2bb611d73cdc317079", @"/Views/_ViewImports.cshtml")]
     public class Views_Store_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ProductListViewModel>
     {
         #pragma warning disable 1998

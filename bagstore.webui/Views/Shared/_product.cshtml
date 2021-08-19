@@ -9,7 +9,21 @@
         </small>
         <div class="card-footer text-center">
             <a asp-controller="store" asp-action="Details" asp-route-url="@Model.Url" class="btn btn-dark btn-sm">İncele</a>
-            <a asp-controller="store" asp-action="addtocart" asp-route-id="@Model.ProductId" class="btn btn-dark btn-sm">Sepete Ekle</a>
+
+            @if(User.Identity.IsAuthenticated) 
+            {
+                <form asp-controller="Cart" asp-action="AddToCart" method="POST" style="display: inline;">
+                    <input type="hidden" name="productId" value="@Model.ProductId">
+                    
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit"class="btn btn-dark btn-sm">Add to Cart</button>
+                </form>
+            }
+            else
+            {
+                <a asp-controller="account" asp-action="login" asp-route-id="@Model.ProductId" class="btn btn-dark btn-sm">Add to Cart</a>
+            }
+            
         </div>
     </div>
 </div>

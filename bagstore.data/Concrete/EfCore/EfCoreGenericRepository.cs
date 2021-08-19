@@ -45,7 +45,7 @@ namespace bagstore.data.Concrete.EfCore
             }
         }
 
-        public void Update(TEntity entity)
+        public virtual void Update(TEntity entity) //override edilebilir
         {
             using (var context = new TContext())
             {
@@ -53,5 +53,6 @@ namespace bagstore.data.Concrete.EfCore
                 context.SaveChanges();
             }
         }
+
     }
 }

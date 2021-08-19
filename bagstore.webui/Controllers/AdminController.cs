@@ -8,18 +8,188 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using bagstore.webui.Identity;
+using System.Collections.Generic;
 
 namespace bagstore.webui.Controllers
 {
+    [Authorize(Roles="admin")]
     public class AdminController : Controller
     {
         private IProductService _productService; //servislere ait metotları kullanabilmek için injection işlemleri
         private ICategoryService _categoryService;
-        public AdminController(IProductService productService, ICategoryService categoryService)
+        private RoleManager<IdentityRole> _roleManager;
+        private UserManager<User> _userManager;
+
+        public AdminController(IProductService productService, 
+                               ICategoryService categoryService,
+                               RoleManager<IdentityRole> roleManager,
+                               UserManager<User> userManager)
         {
             _productService = productService;
             _categoryService = categoryService;
+            _roleManager = roleManager;
+            _userManager = userManager;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> UserEdit(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if(user!=null)
+            {
+                var selectedRoles = await _userManager.GetRolesAsync(user);//seçili olan rolleri getirir
+                var roles = _roleManager.Roles.Select(i=>i.Name); //tüm rolleri getirir
+                
+                ViewBag.Roles = roles;
+                return View(new UserDetailModel(){
+                    UserId = user.Id,
+                    UserName = user.UserName,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    SelectedRoles = selectedRoles
+                });
+            }
+            return Redirect("~/admin/user/list");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UserEdit(UserDetailModel model, string[] selectedRoles)
+        {
+            if(ModelState.IsValid)
+            {
+                var user = await _userManager.FindByIdAsync(model.UserId);
+                if(user!=null)
+                {
+                    user.FirstName = model.FirstName;
+                    user.LastName = model.LastName;
+                    user.UserName = model.UserName;
+                    user.Email = model.Email;
+
+                    var result = await _userManager.UpdateAsync(user);
+
+                    if(result.Succeeded)
+                    {
+                        var userRoles = await _userManager.GetRolesAsync(user);
+                        selectedRoles = selectedRoles?? new string[]{}; //kullanıcı sayfadan bir rol seçmezse boş dizi döndür (null refernces hatası almamak için)
+                        //birden fazla kaydı aynı anda eklemek
+                        await _userManager.AddToRolesAsync(user,selectedRoles.Except(userRoles).ToArray<string>()); //seçilen roller arasından daha önceden veritabanında seçili olan(USERROLES) varsa onları except ile hariç tutar ve diğer rolleri ekler
+                        //birden fazla kaydı aynı anda silmek
+                        await _userManager.RemoveFromRolesAsync(user,userRoles.Except(selectedRoles).ToArray<string>()); //userrolleri arasından rol silme işlemi yaparken seçilen rolleri hariç tutar geri kalanı siler
+                   
+                        return Redirect("/admin/user/list");
+                    }
+                }
+                return Redirect("/admin/user/list");
+            }
+            return View(model);
+        }
+
+        public IActionResult UserList()
+        {
+            return View(_userManager.Users);
+        }
+
+        public IActionResult RoleList()
+        {
+            return View(_roleManager.Roles);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> RoleEdit(string id)
+        {
+            var role = await _roleManager.FindByIdAsync(id);
+
+            var members = new List<User>();
+            var nonmembers = new List<User>();
+
+            foreach (var user in _userManager.Users.ToList())
+            {
+                var list = await _userManager.IsInRoleAsync(user,role.Name)
+                                                ?members:nonmembers; //değer true ise listi members yapar
+                //değer false ise listi nonmembers yapar
+                list.Add(user);//list'e kullanıcıyı ekler
+            }
+           
+            var model = new RoleDetails()
+            {
+                Role = role,
+                Members = members,
+                NonMembers = nonmembers
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RoleEdit(RoleEditModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                foreach(var userId in model.IdsToAdd ?? new string[]{})//eğer null ise boş bir dizi tanımla
+                {
+                    var user = await _userManager.FindByIdAsync(userId);
+                    if(user!=null)
+                    {
+                        var result = await _userManager.AddToRoleAsync(user, model.RoleName);//ilgili rolename'e ilgili kullanıcıyı atadım
+                        if(!result.Succeeded)
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                ModelState.AddModelError("",error.Description);
+                            }
+                        }
+                    }
+                }
+                foreach(var userId in model.IdsToDelete ?? new string[]{})
+                {
+                    var user = await _userManager.FindByIdAsync(userId);
+                    if(user!=null)
+                    {
+                        var result = await _userManager.RemoveFromRoleAsync(user, model.RoleName);//ilgili rolename'e ilgili kullanıcıyı atadım
+                        if(!result.Succeeded)
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                ModelState.AddModelError("",error.Description);
+                            }
+                        }
+                    }
+                }
+            }
+            return Redirect("/admin/role/"+model.RoleId);
+        }
+
+        [HttpGet]
+        public IActionResult RoleCreate()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RoleCreate(RoleModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                var result = await _roleManager.CreateAsync(new IdentityRole(model.Name));
+                if(result.Succeeded)
+                {
+                    return RedirectToAction("RoleList");
+                }
+                else
+                {
+                    foreach(var error in result.Errors)
+                    {
+                        ModelState.AddModelError("",error.Description);
+                    }
+                }
+            }
+            return View(model);
+        }
+
         public IActionResult ProductList()
         {
             return View(new ProductListViewModel()
