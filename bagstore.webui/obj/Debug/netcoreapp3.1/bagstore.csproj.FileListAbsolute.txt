@@ -117,5 +117,6 @@ C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\R
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Admin\UserList.cshtml.g.cs
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Admin\UserEdit.cshtml.g.cs
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
-C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\bagstore.csproj.CoreCompileInputs.cache
-C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\bagstore.genruntimeconfig.cache
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Checkout.cshtml.g.cs
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\bin\Debug\netcoreapp3.1\Iyzipay.dll
+C:\Users\acer\Documents\GitHub\BagStore\bagstore.webui\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Success.cshtml.g.cs

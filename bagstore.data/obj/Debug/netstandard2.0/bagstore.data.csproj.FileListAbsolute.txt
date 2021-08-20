@@ -12,4 +12,3 @@ C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\b
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.csproj.CopyComplete
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.dll
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.pdb
-C:\Users\acer\Documents\GitHub\BagStore\bagstore.data\obj\Debug\netstandard2.0\bagstore.data.csproj.CoreCompileInputs.cache

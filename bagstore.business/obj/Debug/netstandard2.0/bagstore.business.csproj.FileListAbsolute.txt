@@ -11,4 +11,3 @@ C:\Users\acer\Documents\GitHub\BagStore\bagstore.business\obj\Debug\netstandard2
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.business\obj\Debug\netstandard2.0\bagstore.business.csproj.CopyComplete
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.business\obj\Debug\netstandard2.0\bagstore.business.dll
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.business\obj\Debug\netstandard2.0\bagstore.business.pdb
-C:\Users\acer\Documents\GitHub\BagStore\bagstore.business\obj\Debug\netstandard2.0\bagstore.business.csproj.CoreCompileInputs.cache

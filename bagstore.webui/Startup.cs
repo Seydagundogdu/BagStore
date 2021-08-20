@@ -96,6 +96,12 @@ namespace bagstore.webui
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(//ürünler linkine tıklandığında storecontroller altındaki list metoduna gitmesi için
+                    name: "checkout",
+                    pattern: "checkout",
+                    defaults: new {controller="Cart", action="checkout"}
+                );
+
+                endpoints.MapControllerRoute(//ürünler linkine tıklandığında storecontroller altındaki list metoduna gitmesi için
                     name: "cart",
                     pattern: "cart",
                     defaults: new {controller="Cart", action="Index"}

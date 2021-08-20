@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP3_1"
     ],
-    "languageVersion": "8.0",
+    "languageVersion": "",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "bagstore/1.0.0": {
         "dependencies": {
+          "Iyzipay": "2.1.37",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.3",
           "Microsoft.EntityFrameworkCore.Design": "3.1.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.10",
@@ -302,6 +303,20 @@
         },
         "compile": {
           "bagstore.dll": {}
+        }
+      },
+      "Iyzipay/2.1.37": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Iyzipay.dll": {
+            "assemblyVersion": "2.1.37.0",
+            "fileVersion": "2.1.37.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Iyzipay.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.3": {
@@ -3012,6 +3027,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Iyzipay/2.1.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GFY4GJcNr+gn6Re8ZMSmCD3PGqo9qeqa0KMhpToDvL84wCIog4oKrhUC4lTzdeOs6u9YukxiGlk62O7r8eO9jA==",
+      "path": "iyzipay/2.1.37",
+      "hashPath": "iyzipay.2.1.37.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.3": {
       "type": "package",

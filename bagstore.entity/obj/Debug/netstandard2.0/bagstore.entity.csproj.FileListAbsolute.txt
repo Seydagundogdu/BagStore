@@ -14,4 +14,3 @@ C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.AssemblyInfo.cs
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.dll
 C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.pdb
-C:\Users\acer\Documents\GitHub\BagStore\bagstore.entity\obj\Debug\netstandard2.0\bagstore.entity.csproj.CoreCompileInputs.cache
